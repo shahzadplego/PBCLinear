@@ -1,0 +1,813 @@
+/*! HTML5 Boilerplate v5.0 | MIT License | http://h5bp.com/ */
+
+html {
+    font-family: $bodyFont;
+    font-weight: 400;
+    color: $bodyColor;
+    font-size: 1em;
+    line-height: 1.4;
+}
+
+::-moz-selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+::selection {
+    background: #b3d4fc;
+    text-shadow: none;
+}
+
+hr {
+    display: block;
+    height: 1px;
+    border: 0;
+    border-top: 1px solid #ccc;
+    margin: 1em 0;
+    padding: 0;
+}
+
+audio,
+canvas,
+iframe,
+img,
+svg,
+video {
+    vertical-align: middle;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    padding: 0;
+}
+
+textarea {
+    resize: vertical;
+}
+
+.browserupgrade {
+    margin: 0.2em 0;
+    background: #ccc;
+    color: #000;
+    padding: 0.2em 0;
+}
+
+
+/* ==========================================================================
+   Author's custom styles
+   ========================================================================== */
+
+
+body {
+    font-size: 16px;
+    margin: 0;
+    padding: 0;
+}
+
+h1 {
+    font-size: 1.5em;
+    font-family: $titleFont;
+    font-weight: 700;
+    font-weight: normal;
+}
+
+h2 {
+    font-family: $titleFont;
+    font-size: 1.25em;
+}
+
+h3 {
+    font-family: $titleFont;
+    font-size: 1.25em;
+    font-weight: normal;
+}
+
+h4 {
+    font-family: $titleFont;
+    font-size: 1.125em;
+}
+
+p {
+    line-height: 1.45em;
+}
+
+input {
+    outline: none;
+}
+
+
+.page-seperator {
+    margin: 2.5rem auto;
+    display: block;
+}
+
+.page-separator--extra-margin-mobile {
+    margin: 3.25rem 0;
+    display: block;
+
+    @media #{$mq-medium} {
+        margin: 2.5rem auto;
+    }
+}
+
+.margin-top {
+    margin-top: 2rem;
+}
+
+.no-margin {
+    margin: 0 auto;
+}
+
+
+
+.standard-title {
+    font-family: $titleFont;
+    font-weight: 700;
+    font-size: 1.5em;
+    text-transform: uppercase;
+    line-height: 1.3em;
+    color: $titleColor;
+    margin: 0 0 1rem 0;
+    padding: 0;
+}
+
+.standard-title--no-margin {
+    @extend .standard-title;
+    margin: 0;
+}
+
+.standard-title--margin-top {
+    @extend .standard-title;
+    margin: 2.5rem 0 .5rem 0;
+
+    @media #{$mq-580} {
+        margin: 3.25rem 0 1rem 0;
+    }
+}
+
+.standard-title--margin-bottom {
+    @extend .standard-title;
+    margin: 0 0 1.5rem 0;
+
+    @media #{$mq-580} {
+        margin: 0 0 2.5rem 0;
+    }
+}
+
+.page-title {
+    @extend .standard-title;
+    width: 95%;
+    max-width: $max-width;
+    margin: 1.5em auto;
+    padding: 0 0 .5em 0;
+    border-bottom: solid 1px $neutral;
+}
+
+.page-title--no-border {
+    @extend .page-title;
+    margin: 1.5em auto 0 auto;
+    border-bottom: none;
+}
+
+.page-title--no-bottom-margin {
+    @extend .standard-title;
+    width: 95%;
+    max-width: $max-width;
+    margin: 1.5em auto 0 auto;
+    padding: 0 0 .5em 0;
+    border-bottom: solid 1px $neutral;
+}
+
+
+.content-separating-title {
+    width: $max-percent;
+    font-size: 1.125;
+    font-weight: 500;
+    margin: 1rem auto 2rem auto;
+    line-height: 1em;
+    padding: 0 0 .5em 0;
+    color: $titleColor;
+    border-bottom: solid 1px $neutral;
+
+    @media #{$mq-large} {
+        width: $max-width;
+    }
+}
+
+.standard-title--accent {
+    @extend .standard-title;
+
+    &:after {
+        display: block;
+        clear: both;
+        width: 3em;
+        margin: .5rem auto 0 auto;
+        padding: 0 0 .5em 0;
+        content: " ";
+        border: solid $accent;
+        border-width: 3px 0 0 0;
+    }
+}
+
+.sub-title {
+    font-size: 1.25em;
+    line-height: 1.5em;
+    color: $bodyColor;
+    margin: 0;
+    padding: 0;
+}
+
+.sub-title--accent {
+    @extend .sub-title;
+
+    &:after {
+        display: block;
+        clear: both;
+        width: 3em;
+        margin: .5rem auto 0 auto;
+        padding: 0 0 .5em 0;
+        content: " ";
+        border: solid $accent;
+        border-width: 3px 0 0 0;
+    }
+}
+
+.primary {
+    color: $primary;
+}
+
+.primary-dark {
+    color: $primaryDark;
+}
+
+.blue {
+    color: $primary;
+}
+
+.regular-weight {
+    font-weight: 400 !important;
+}
+
+.link {
+    @include transition(opacity 300ms);
+    color: $link;
+    text-decoration: none;
+
+    &:hover {
+        opacity: .8;
+    }
+}
+
+.link--primary {
+    @extend .link;
+    color: $primary;
+}
+
+.button {
+    @include transition(background-color 300ms, border 300ms);
+    @include box-sizing();
+    @include letter-spacing(100);
+    font-family: $buttonFont;
+    color: #fff;
+    background-color: $link;
+    padding: .75em 1.5em;
+    margin: 1em auto 0 auto;
+    line-height: 1em;
+    text-align: center;
+    text-decoration: none;
+    border: solid 3px $link;
+    display: block;
+    width: 90%;
+    text-transform: uppercase;
+
+    &:hover {
+        background-color: $primary;
+        border: solid 3px $primary;
+    }
+
+    @media #{$mq-medium} {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+
+.button--no-hover {
+    @include box-sizing();
+    @include letter-spacing(100);
+    font-family: $buttonFont;
+    color: #fff;
+    background-color: $link;
+    padding: .75em 1.5em;
+    margin: 1em auto 0 auto;
+    line-height: 1em;
+    text-align: center;
+    text-decoration: none;
+    border: solid 3px $link;
+    display: block;
+    width: 90%;
+
+    @media #{$mq-medium} {
+        display: inline-block;
+        width: auto;
+    }
+}
+
+.button--auto-width {
+    @extend .button;
+    display: inline-block;
+}
+
+.button--white {
+    @extend .button;
+    @include transparent(#fff,.20);
+    color: #fff;
+    border: solid 2px #fff;
+
+    &:hover {
+        @include transparent(#fff,.40);
+        color: #fff;
+    }
+}
+
+.button--tel-link {
+    @extend .button;
+
+    @media #{$mq-medium} {
+        &:hover {
+            cursor: default;
+            background-color: $link;
+            border-color:$link;
+        }
+    }
+}
+
+.button--primary {
+    @include transition(background-color 300ms);
+    @extend .button;
+    color: #fff;
+    border: solid 3px $footerButtonBorder;
+    background-color: $footerButtonBG;
+    margin-left: 2em;
+
+    &:hover {
+        background-color: $footerButtonBorder;
+        border: solid 3px $footerButtonBorder;
+    }
+}
+
+.button--primary-dark {
+    @include transition(background-color 300ms, border 300ms);
+    @extend .button;
+    color: #fff;
+    border: solid 3px $primaryDark;
+    background-color: $primaryDark;
+
+    &:hover {
+        background-color: $primary;
+        border: solid 3px $primary;
+    }
+}
+
+.button--download {
+    @extend .button;
+    padding: .75em 1em .75em .5em;
+
+    &:before {
+        display: inline-block;
+        cursor: pointer;
+        background: url(../img/download_arrow.png);
+        background-position: 0 0;
+        width: 25px;
+        height: 25px;
+        content: " ";
+        margin: 0 0 -5px 0;
+    }
+
+    &:hover {
+        &:before {
+            background-position: 0 -25px;
+        }
+    }
+}
+
+.button--text-only {
+    @include transition(opacity 300ms);
+    background-color: transparent;
+    color: $link;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: 0;
+
+    &:hover {
+        opacity: .8;
+    }
+}
+
+.button--border-text {
+    @include transition(background-color 300ms, color 300ms);
+    background-color: transparent;
+    color: $link;
+    border: none;
+    outline: none;
+    margin: 0;
+    padding: .5em;
+    border: solid 1px $link;
+    text-decoration: none;
+    display: block;
+
+    &:hover {
+        background-color: $link;
+        color: #fff;
+    }
+}
+
+.expansion-title, .rfq-expansion-title {
+    font-family: $titleFont;
+    font-weight: 500;
+    font-size: 1.125em;
+    line-height: 1.3em;
+    color: $titleColor;
+    margin: 0;
+    padding: 0;
+
+    &:before {
+        display: inline-block;
+        cursor: pointer;
+        background: url(../img/svg/catalog-expand-collapse.svg);
+        background-position: 20px 0;
+        background-size: 20px 40px;
+        width: 20px;
+        height: 20px;
+        content: " ";
+        margin: 0 .5em -.25em -2em;
+    }
+}
+
+.expansion-title--open {
+    @extend .expansion-title;
+
+    &:before {
+        background-position: 0 -20px;
+    }
+}
+
+.expansion-section, .rfq-expansion-section {
+    display: none;
+
+    & a {
+        @include transition(opacity 300ms);
+        color: $link;
+        text-decoration: none;
+
+        &:hover {
+            opacity: .8;
+        }
+    }
+}
+
+.disclaimer-text{
+    color:$neutral;
+    font-size: .8em;
+    margin: 2.5em 0;
+    padding: 0;
+    width: 50%;
+}
+
+.fine-print {
+    font-size: .9em;
+    margin: 0;
+    padding: 0;
+}
+
+.add-item {
+    @include transition(color 300ms);
+    font-weight: 700;
+    margin: 0;
+
+    &:before {
+        content: "+";
+        width: 1em;
+        height: 1em;
+        display: inline;
+        padding: 0 .25em 0 0;
+        font-weight: 700;
+    }
+
+    &:hover {
+        color: $link;
+        cursor: pointer;
+    }
+}
+
+.add-item__submit {
+    border: none;
+    outline: none;
+    background-color: transparent;
+}
+
+.add-item__description {
+    margin: 0;
+    padding: 0 0 0 1em;
+}
+
+.form-buttons {
+    & .button--auto-width {
+        margin: 0 2em 0 0;
+    }
+
+    @media #{$mq-medium} {
+        margin: 0;
+
+        & a, input {
+            margin: 0 .5em;
+        }
+    }
+}
+
+.pagination {
+    padding: 1.5em 0 2.5em 0;
+    text-align: center;
+    font-weight: 700;
+
+    & a {
+        @include transition(opacity 300ms);
+        color: $primary;
+        text-decoration: none;
+        padding: 0 .3em;
+
+        &:hover {
+            @include transition(opacity 300ms);
+            opacity: .75;
+        }
+    }
+
+    @media #{$mq-medium} {
+        & a {
+            padding: 0 .5em;
+        }
+
+        padding: 1.5em 0 3.75em 0;
+    }
+}
+
+
+.right-flex-pagination {
+    width: 100%;
+    margin: 0 auto 2.5em auto;
+    padding: 0;
+
+    @media #{$mq-640} {
+        width: 70%;
+        float: right;
+        margin: 0 auto 3.75em auto;
+    }
+}
+
+.video-padding {
+    margin: 30px auto;
+}
+
+.video__iframe .ratio {
+    position: relative;
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+.video__iframe iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+.video__iframe {
+    position: relative;
+    width: 100%;
+    height: auto;
+
+    @media #{$mq-medium} {
+        width: 80%;
+        margin: 0 auto;
+    }
+}
+
+a.pagination__first {
+    margin: 0;
+    padding: 0;
+    height: 1em;
+    width: 1em;
+    display: inline-block;
+
+    & img {
+        height: 1em;
+    }
+}
+
+a.pagination__previous {
+    margin: 0;
+    padding: 0;
+    height: 1em;
+    display: inline-block;
+
+    & img {
+        height: 1em;
+    }
+}
+
+a.pagination__last {
+    margin: 0;
+    padding: 0;
+    height: 1em;
+    display: inline-block;
+
+    & img {
+        height: 1em;
+    }
+}
+
+a.pagination__next {
+    margin: 0;
+    padding: 0;
+    height: 1em;
+    display: inline-block;
+
+    & img {
+        height: 1em;
+    }
+}
+
+
+.pagination__title {
+    font-weight: 700;
+    padding: 0 1em;
+}
+
+.pagination__page--current {
+    display: inline;
+    padding: 0;
+    margin: 0 .3em;
+    border-bottom: solid 1px;
+
+    @media #{$mq-medium} {
+        padding: 0 .5em;
+    }
+}
+
+
+.loading {
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+
+    & p {
+        font-size: 2em;
+        z-index: 60;
+        color: #000;
+        opacity: 1;
+        position: fixed;
+        top: 45%;
+        left: 50%;
+        right: 50%;
+    }
+
+    &:after {
+        width: 100%;
+        height: 100%;
+        background-color: $neutral;
+        position: fixed;
+        z-index: 50;
+        opacity: .5;
+    }
+}
+
+
+
+
+/* ==========================================================================
+   Media Queries
+   ========================================================================== */
+
+@media only screen and (min-width: 35em) {
+}
+
+@media print, (-o-min-device-pixel-ratio: 5/4), (-webkit-min-device-pixel-ratio: 1.25), (min-resolution: 120dpi) {
+}
+
+/* ==========================================================================
+   Helper classes
+   ========================================================================== */
+
+.hidden {
+    display: none !important;
+    visibility: hidden;
+}
+
+.visuallyhidden {
+    border: 0;
+    clip: rect(0 0 0 0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+.visuallyhidden.focusable:active,
+.visuallyhidden.focusable:focus {
+    clip: auto;
+    height: auto;
+    margin: 0;
+    overflow: visible;
+    position: static;
+    width: auto;
+}
+
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " ";
+    display: table;
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+.clearfix {
+    *zoom: 1;
+}
+
+/* ==========================================================================
+   Print styles
+   ========================================================================== */
+
+@media print {
+    *,
+    *:before,
+    *:after {
+        background: transparent !important;
+        color: #000 !important;
+        box-shadow: none !important;
+        text-shadow: none !important;
+    }
+
+    a,
+    a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    abbr[title]:after {
+        content: " (" attr(title) ")";
+    }
+
+    a[href^="#"]:after,
+    a[href^="javascript:"]:after {
+        content: "";
+    }
+
+    pre,
+    blockquote {
+        border: 1px solid #999;
+        page-break-inside: avoid;
+    }
+
+    thead {
+        display: table-header-group;
+    }
+
+    tr,
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p,
+    h2,
+    h3 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2,
+    h3 {
+        page-break-after: avoid;
+    }
+}

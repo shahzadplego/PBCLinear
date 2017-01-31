@@ -1,0 +1,119 @@
+﻿
+.site-search-box {
+    text-align:center;
+    margin:2em auto;
+    padding:0 0 2em 0;
+    border-bottom:solid 1px $neutral;
+
+    & label {
+        color: $primaryDark;
+        font-size: 1.25em;
+    }
+
+
+    & input {
+        @include transition(border-color 300ms, background-color 300ms, color 300ms);
+        @include box-sizing;
+        padding: 5px;
+        margin: 2px 0 0 0;
+        line-height: 1.25em;
+        height: 2.5em;
+        border: solid 1px $neutral;
+        background-color: lighten($bodyColor, 60);
+        color: lighten($bodyColor, 20);
+
+        &:focus {
+            border-color: $primaryDark;
+            color: $bodyColor;
+            background-color: #fff;
+        }
+    }
+
+    & input[type=submit] {
+        @extend .button;
+        display:inline;
+        margin: 1em auto 0 auto;
+        width:90%;
+        clear: both;
+        border: none;
+
+        @media #{$mq-small} {
+            width: auto;
+            margin: 0;
+        }
+
+        &:hover {
+            border: none;
+        }
+
+        &:focus {
+            background-color: $primary;
+            border: none;
+            color: #fff;
+        }
+    }
+
+
+        @media #{$mq-small} {
+            text-align:left;
+        }
+}
+
+
+.search-result{
+    padding:1em 0;
+    margin:1em auto;
+    width:$max-percent;
+    border-bottom:solid 1px $neutral;
+    display:flex;
+    flex-wrap:wrap;
+    @media #{$mq-large}
+    {
+        width:$max-width;
+    }
+}
+
+.search-result__image{
+    margin:0 auto 1em auto;
+    align-content:center;
+    text-align:center;
+
+    @media #{$mq-580}
+    {
+        margin:0;
+        flex-basis:30%;
+    }
+    @media #{$mq-940}
+    {
+        flex-basis:20%;
+    }
+
+}
+
+.search-result__text{
+
+    @media #{$mq-580}
+    {
+        flex-basis:70%;
+    }
+    @media #{$mq-940}
+    {
+        flex-basis:80%;
+    }
+
+}
+
+.search-result__title, .search-result__title a{
+  color:$primary;
+  text-decoration:none;   
+}
+
+.search-result__url{
+    display:block;
+}
+
+.search-result__date{
+    display:block;
+    font-size:.8em;
+    line-height:2.5em;
+}

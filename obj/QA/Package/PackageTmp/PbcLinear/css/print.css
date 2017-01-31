@@ -1,0 +1,13 @@
+﻿@media print {
+    body {
+        font-size: 11px;
+    }
+
+    .nav-wrap, .footer-cta, footer, .button, .product-preview, .product-preview, .product-views, .email, .print, .product-details__links {
+        display: none;
+    }
+
+    a[href]:after {
+        content: none !important;
+    }
+}

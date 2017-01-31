@@ -1,0 +1,379 @@
+
+.content-width {
+    width: $max-percent;
+    margin: 0 auto;
+
+    @media #{$mq-large} {
+        width: $max-width;
+    }
+
+    & a[href^="tel:"] {
+        color: $bodyColor;
+        text-decoration: none;
+
+        &:hover {
+            cursor: default;
+        }
+    }
+}
+
+.first-paragraph{
+    & p:first-of-type{
+        margin-top:0;
+    }
+}
+
+.margin-bottom--6 {
+    margin-bottom: 6em;
+    @extend .first-paragraph;
+
+}
+
+.content-width--margin-top {
+    @extend .content-width;
+    margin: 2rem auto 0 auto;
+    @extend .first-paragraph;
+
+    @media #{$mq-medium} {
+        margin: 2.5rem auto 0 auto;
+    }
+}
+
+.content-width--margin-bottom {
+    @extend .content-width;
+    margin: 0 auto 2rem auto;
+    @extend .first-paragraph;
+
+    @media #{$mq-medium} {
+        margin: 0 auto 3rem auto;
+    }
+}
+
+.content-width--margin-bottom--8 {
+    @extend .content-width;
+    @extend .first-paragraph;
+    margin: 2rem auto 3.75rem auto;
+
+    @media #{$mq-medium} {
+        margin: 2rem auto 5rem auto;
+    }
+}
+
+.content-width--margin {
+    @extend .first-paragraph;
+    @extend .content-width;
+    margin: 2rem auto;
+}
+
+
+
+a.content-width-link {
+    @include transition(opacity 300ms);
+    width: $max-percent;
+    margin: 2rem auto 3.75rem auto;
+    display: block;
+    text-decoration: none;
+
+    @media #{$mq-large} {
+        width: $max-width;
+        margin: 2rem auto 5rem auto;
+    }
+
+    & .standard-title {
+        padding: .5rem 0 0 0;
+    }
+
+    &:hover {
+        opacity: .8;
+    }
+}
+
+.forty-five {
+    @extend .first-paragraph;
+    width: $max-percent;
+
+    @media #{$mq-medium} {
+        width: $forty-five-percent;
+    }
+}
+
+.sixty-five {
+    @extend .first-paragraph;
+    width: $max-percent;
+    margin: 0 auto 4rem auto;
+
+    @media #{$mq-medium} {
+        width: $sixty-five-percent;
+    }
+}
+
+.sixty-five--left {
+    @extend .first-paragraph;
+    width: $max-percent;
+    margin: 0 auto 4rem auto;
+
+    @media #{$mq-medium} {
+        width: $sixty-five-percent;
+        margin: 0 0 4rem 0;
+    }
+}
+
+.seventy {
+    @extend .first-paragraph;
+    width: 70%;
+    margin: 0 auto;
+}
+
+.seventy-two {
+    @extend .first-paragraph;
+    width: $max-percent;
+    margin: 0 auto;
+
+    @media #{$mq-medium} {
+        width: $seventy-two-percent;
+        max-width: $max-width;
+    }
+}
+
+.seventy-five {
+    @extend .first-paragraph;
+    width: $max-percent;
+    margin: 0 auto 2.5rem auto;
+
+    @media #{$mq-medium} {
+        width: $seventy-five-percent;
+    }
+}
+
+
+.seventy-five--margin-bottom {
+    @include box-sizing;
+    @extend .first-paragraph;
+    width: $max-percent;
+    margin: 0 auto 2.5rem auto;
+
+    @media #{$mq-medium} {
+        width: $seventy-five-percent;
+        margin: 0 auto 5rem auto;
+    }
+}
+
+
+.seventy-five--margin-bottom--8 {
+    @extend .first-paragraph;
+    @extend .seventy-five;
+    margin: 2rem auto 4rem auto;
+
+    @media #{$mq-medium} {
+        margin: 2.75rem auto 5rem auto;
+    }
+}
+
+
+
+.seventy-seven {
+    @extend .first-paragraph;
+    width: $max-percent;
+    margin: 0 auto 4rem auto;
+
+    @media #{$mq-medium} {
+        width: $seventy-seven-percent;
+        margin: 0 auto 5rem auto;
+    }
+}
+
+
+.seventy-five--margin-top {
+    @extend .first-paragraph;
+    @extend .seventy-five;
+    margin: 2.5rem auto 1.5rem auto;
+
+    @media #{$mq-medium} {
+        margin: 3.25rem auto 2.5rem auto;
+    }
+}
+
+.eighty-five {
+    @extend .first-paragraph;
+    width: 100%;
+    margin: 0 auto 4rem auto;
+
+    @media #{$mq-860} {
+        width: $eight-five-percent;
+    }
+}
+
+.max-width {
+    @extend .first-paragraph;
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto 4rem auto;
+}
+
+.hr-seperated {
+    width: $max-percent;
+    max-width: $max-width;
+    margin: 0 auto 4rem auto;
+    padding: 4rem 0 0 0;
+    border-top: solid 1px $neutral;
+}
+
+.img-content-width {
+    @extend .first-paragraph;
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto 2rem auto;
+    padding: 0;
+}
+
+.img-content-width--no-margin {
+    @extend .first-paragraph;
+    width: 100%;
+    max-width: $max-width;
+    margin: 0 auto;
+    padding: 0;
+}
+
+
+.img-75 {
+    width: 100%;
+    max-width: $seventy-five-percent;
+    margin: 0 auto 1rem auto;
+    padding: 0;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.img-70 {
+    width: 100%;
+    max-width: $seventy-percent;
+    margin: 0 auto 1rem auto;
+    padding: 0;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.img-70--no-padding {
+    @extend .img-70;
+    margin: 0 auto;
+}
+
+//events styles
+.event {
+    width: 100%;
+    margin: 0;
+    padding: 2em 1em;
+    display: block;
+    border-top: solid 1px $neutral;
+
+    &:last-of-type {
+        border-bottom: solid 1px $neutral;
+        margin: 0 0 3em 0;
+    }
+
+    & a {
+        @include transition(opacity 300ms);
+        color: $link;
+        text-decoration: none;
+
+        &:after {
+            margin: 0 0 0 .5em;
+            padding: 0;
+            content: url(../img/svg/arrow_view_blue.svg);
+            height: .4em;
+            width: .4em;
+            display: inline-block;
+        }
+
+        &:hover {
+            @include transition(opacity 300ms);
+            opacity: .75;
+        }
+    }
+}
+
+.event__title {
+    font-family: $bodyFont;
+    color: $titleColor;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-weight: normal;
+    font-size: 1.6em;
+    margin: 0;
+    padding: 0;
+}
+
+
+.event__date-location, .event__date {
+    margin: 0;
+    padding: 0 0 1em 0;
+    font-size: 1.125em;
+    color: $titleColor;
+
+    & span:last-of-type {
+        &:before {
+            content: "|";
+            padding: 0 1em;
+        }
+    }
+}
+
+.event__summary {
+    color: $titleColor;
+    margin: 0;
+    padding: 0;
+
+    & p {
+        margin: 0 0 1em 0;
+        padding: 0;
+    }
+}
+
+.search-results {
+    min-height: 200px;
+}
+
+.search-result__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.search-result__list-item {
+    padding: 1rem;
+    margin: 1rem 0;
+    border-bottom: solid 1px $neutral;
+    max-width: 100%;
+    overflow: hidden;
+    word-wrap: break-word;
+
+    & a {
+        @include transition(opacity 300ms);
+        color: $link;
+        display: block;
+        text-decoration: none;
+
+        &:hover {
+            @include transition(opacity 300ms);
+            opacity: .75;
+        }
+    }
+}
+
+.search-result__title {
+    font-weight: 700;
+    font-size: 1.125em;
+
+    &:hover {
+        @include transition(opacity 300ms);
+        opacity: .75;
+    }
+}
+
+.search-results__url {
+    font-weight: 400;
+}

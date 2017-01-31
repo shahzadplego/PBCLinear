@@ -1,0 +1,130 @@
+﻿.no-flexbox {
+    .header-flex {
+        display: table-row;
+
+        @media #{$mq-large} {
+            display: block;
+        }
+    }
+
+    .nav-login, .logo {
+        display: table-cell;
+    }
+
+    .nav-launch {
+        display: table-cell;
+
+        @media #{$mq-large} {
+            display: none;
+        }
+    }
+
+    .services-flex {
+        @media #{$mq-small} {
+            display: table-row;
+        }
+    }
+
+    .service__item {
+        @media #{$mq-small} {
+            display: table-cell;
+        }
+    }
+
+    .split-width {
+        @media #{$mq-medium} {
+            display: table-row;
+        }
+    }
+
+    .contact-flex {
+        @media #{$mq-medium} {
+            max-width: $maxWidth;
+            display: table-row;
+        }
+    }
+
+    .contact-flex__content {
+        @media #{$mq-medium} {
+            display: table-cell;
+        }
+    }
+
+    .split-width {
+        @media #{$mq-medium} {
+            display: table-row;
+        }
+    }
+
+    .split-width__content {
+        @media #{$mq-medium} {
+            display: table-cell;
+        }
+    }
+
+    .directory-item {
+        width: 255px;
+
+        @media #{$mq-medium} {
+            display: inline-block;
+        }
+    }
+
+    .bubble-wrap {
+        display: table-row;
+
+        @media #{$mq-large} {
+            width: 100%;
+            max-width: $maxWidth;
+            margin: 0 auto;
+            padding: 0 0 2em 0;
+            text-align: center;
+            position: relative;
+            height: 650px;
+            display: block;
+        }
+    }
+
+    .bubble-item {
+        display: inline-block;
+        min-width: 25%;
+
+        @media #{$mq-large} {
+            height: auto;
+            display: block;
+            position: absolute;
+            float: left;
+            z-index: 5;
+        }
+    }
+
+    .get-personal__cta {
+        display: block;
+        clear: both;
+        width: 100%;
+    }
+
+    .insta-flex{
+        display:table-row;
+    }
+
+    .insta-flex__item{
+        display:inline-block;
+        max-width:320px;
+    }
+
+    .facts-flex{
+        display:table-row;
+    }
+
+    .facts-flex__item{
+        display:inline-block;
+        max-width:50%;
+    }
+
+    @media #{$mq-640}
+    {
+        max-width:25%;
+    }
+
+}

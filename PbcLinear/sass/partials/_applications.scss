@@ -1,0 +1,117 @@
+﻿
+.application-stories {
+    margin: 1.5rem auto 0 auto;
+    padding: 1.5rem 0 0 0;
+    border: solid $neutral;
+    border-width: 1px 0 0 0;
+
+    @media #{$mq-medium} {
+        margin: 2rem auto 0 auto;
+        padding: 2rem 0 0 0;
+    }
+}
+
+.hovered-background {
+    position: relative;
+    margin-bottom: 2.5em;
+
+    @media #{$mq-medium} {
+        //height: 300px;
+        z-index: 10;
+        margin-bottom: inherit;
+
+        &:hover {
+            & .hovered-background__content {
+                background-color: rgba(0,0,0,.15);
+            }
+        }
+    }
+}
+
+.hovered-background__image {
+    margin: 0;
+
+    & img {
+        width: 100%;
+    }
+}
+
+.hovered-background__content {
+    display: block;
+    height: auto;
+
+    & h3 {
+        color: $titleColor;
+        text-align: center;
+        margin: 1.5rem auto 0 auto;
+        font-size: 1em;
+        font-weight: 600;
+        text-transform: uppercase;
+    }
+
+    & p {
+        text-align: center;
+        margin: 0 auto;
+        padding: 0;
+    }
+
+    & a {
+        @include transition(color 300ms);
+        color: $link;
+        font-weight: 600;
+        text-decoration: underline;
+    }
+
+    @media #{$mq-medium} {
+        @include transition(background-color 300ms);
+        background-color: rgba(0,0,0,.65);
+        width: 100%;
+        height: 100%;
+        margin-top: -100%;
+        z-index: 50;
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        & h3 {
+            @include transition(text-shadow 300ms);
+            color: #fff;
+            font-size: 1em;
+            text-align: center;
+            line-height: 1.5em;
+            width: 95%;
+            margin: 0 auto;
+        }
+
+        & a {
+            color: darken($neutral, 10);
+            font-weight: 600;
+            text-decoration: none;
+        }
+
+        &:hover {
+            cursor: pointer;
+
+            & h3 {
+                text-shadow: 2px 2px 5px rgba(0,0,0,.65);
+            }
+
+            & a {
+                color: #fff;
+            }
+        }
+    }
+
+    @media #{$mq-large} {
+        & h3 {
+            font-size: 1.125em;
+        }
+    }
+}
+
+
+.vertical-align-content {
+    @include vertical-align();
+}

@@ -1,0 +1,236 @@
+﻿.hidden-link {
+    display: none;
+}
+
+.overlay-parent, .configurator-item {
+    &:hover {
+        cursor: pointer;
+
+        & .overlay {
+            &:after {
+                background-color: rgba(0,0,0,.15);
+            }
+        }
+    }
+}
+
+.centered-background-image {
+    //height: 175px;
+    height: 200px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-position: 50% 50%;
+
+    & h2, h3 {
+        @include vertical-align();
+        @include letter-spacing(250);
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        z-index: 50;
+        font-family: $serifFont;
+        width: 90%;
+
+        & .border {
+            padding: .5em;
+            border: solid 1px #fff;
+            display: inline-block;
+        }
+    }
+
+    @media #{$mq-small} {
+        height: 175px;
+        background-position: 50% 25%;
+    }
+
+    @media #{$mq-medium} {
+        //height:135px;
+    }
+}
+
+
+
+.overlay {
+    object-fit: contain;
+
+    &:after {
+        @include transition(background-color 300ms);
+        background-color: rgba(0,0,0,.30);
+        width: 100%;
+        height: 100%;
+        display: block;
+        content: " ";
+        top: 0;
+        position: absolute;
+    }
+
+    & h2, h3 {
+        font-size: .7em;
+    }
+
+    @media #{$mq-940} {
+
+        & h2, h3 {
+            font-size: .9em;
+        }
+    }
+}
+
+.overlay-content {
+    margin: 0 auto 1em auto !important;
+
+    & p {
+        margin: 1em auto;
+    }
+}
+
+.overlay-link {
+    & a {
+        color: $link;
+    }
+}
+
+
+.wysiwyg {
+    & a {
+        @include transition(color 300ms);
+        color: $link;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+}
+
+.wysiwyg-img {
+    @include box-sizing;
+    background-color: $footerButtonBorder;
+    position: relative;
+    padding: 1em;
+    margin: 0;
+    width: 100%;
+
+    & img {
+        height: auto;
+        width: 100%;
+    }
+
+    @media #{$mq-medium} {
+        padding: 1em 0 1em 1em;
+        margin: 0;
+    }
+}
+
+.wysiwyg-content {
+    @include box-sizing;
+    padding: 1em 1.5em;
+    color: #fff;
+
+    & h2, h3, h3 {
+        color: $primary;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+    }
+
+    & ul {
+        margin: 0 0 0 1em;
+        padding: 0;
+        list-style-type: bullet;
+    }
+
+    & li {
+        margin: 1em 0;
+    }
+
+    @media #{$mq-medium} {
+        padding: 1.5em;
+    }
+}
+
+
+
+
+.wysiwyg-nobg {
+    margin:0;
+    padding:0;
+    font-size:1em;
+
+    & h2, h3, h3 {
+        color: $primary;
+        margin: 0;
+        padding: 0;
+        text-transform: uppercase;
+    }
+
+    & h5{
+        color:#000;
+        display:block;
+        text-transform:uppercase;
+        font-size:1.25em;
+        margin:0;
+        padding:0;
+        font-weight:normal;
+    }
+
+    & h6{
+        color:$bodyColor;
+        display:block;
+        text-transform:uppercase;
+        font-size:1em;
+        margin:0;
+        padding:0;
+        font-weight:normal;
+    }
+
+    & ul {
+        margin: 0 0 0 1rem;
+        padding: 0;
+        list-style-type: bullet;
+    }
+
+    & li {
+        margin: 0;
+    }
+
+    & a {
+        @include transition(color 300ms);
+        color: $link;
+
+        &:hover {
+            color: $primary;
+        }
+    }
+
+    @media #{$mq-medium} {
+        @include box-sizing;
+        width: 65%;
+        float: left;
+        padding: 1em 0 1em 1em;
+        margin: 0;
+    }
+}
+
+.image-float__right {
+    @include box-sizing;
+    margin: 0;
+    width: 100%;
+    & img {
+        display:block;
+        height: auto;
+        max-width: 100%;
+        position: relative;
+        margin: 1em auto;
+    }
+
+    @media #{$mq-medium} {
+        width: 35%;
+        float: right;
+        padding: 1em 0 1em 1em;
+        margin: 0;
+    }
+}

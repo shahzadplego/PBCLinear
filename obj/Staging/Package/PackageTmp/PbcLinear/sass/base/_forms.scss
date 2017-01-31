@@ -1,0 +1,533 @@
+﻿
+button {
+    &:focus {
+        outline: none;
+    }
+}
+
+.sign-in {
+    width: $max-percent;
+    max-width: $max-width;
+    margin: 0 auto 1em auto;
+    font-weight: 700;
+    font-size: 1.25em;
+
+    & p {
+        margin: 0;
+        padding: 0;
+    }
+
+    & a {
+        @include transition(opacity 300ms);
+        color: $link;
+        text-decoration: none;
+
+        &:hover {
+            @include transition(opacity 300ms);
+            opacity: .75;
+        }
+    }
+
+    & .fine-print {
+        font-size: .9em;
+        font-weight: 400;
+    }
+}
+
+.forgot-password {
+    max-width: $max-width;
+    margin: .5em auto 2em auto;
+    padding: 0;
+
+    & a {
+        @include transition(opacity 300ms);
+        color: $link;
+        text-decoration: none;
+
+        &:hover {
+            @include transition(opacity 300ms);
+            opacity: .75;
+        }
+    }
+}
+
+.form-wrapper, .confirmation-message {
+    @extend .clearfix;
+    @extend .content-width;
+    margin: 0 auto;
+    padding: 4em 0 3.5em 0;
+
+    & label {
+        display: block;
+    }
+
+    & textarea {
+        width: 105%;
+        height: 4em;
+    }
+
+    & select {
+        padding: 5px;
+        margin: 2px 0 0 0;
+        width: 100%;
+    }
+
+    @media #{$mq-small} {
+        & textarea {
+            width: 103%;
+        }
+    }
+
+    @media #{$mq-medium} {
+        padding: 4em 0 0 0;
+
+        & textarea {
+            width: 100%;
+        }
+    }
+
+    & a {
+        @include transition(opacity 300ms);
+        color: $link;
+        text-decoration: none;
+
+        &:hover {
+            @include transition(opacity 300ms);
+            opacity: .75;
+        }
+    }
+}
+
+.form-wrapper--no-padding {
+    @extend .form-wrapper;
+    padding: 0;
+}
+
+.form-column-small {
+    @extend .clearfix;
+    display: inline-block;
+    width: 100%;
+    margin: 0 0 10px 0;
+
+    @media #{$mq-large} {
+        width: 25%;
+        margin: 0;
+    }
+}
+
+.form-column-small--left {
+    @extend .form-column-small;
+    float: left;
+
+    @media #{$mq-large} {
+        width: 25%;
+        margin: 0 5% 0 0;
+    }
+}
+
+.form-column-small--right {
+    @extend .form-column-small;
+    float: right;
+
+    @media #{$mq-large} {
+        width: 25%;
+        margin: 0 0 0 5%;
+    }
+}
+
+.form-column-large {
+    @extend .clearfix;
+    float: right;
+    display: inline-block;
+    width: 100%;
+    margin: 0;
+
+    @media #{$mq-large} {
+        width: 70%;
+    }
+}
+
+.form-column-large--left {
+    @extend .form-column-large;
+    float: left;
+}
+
+.form-column-large--right {
+    @extend .form-column-large;
+    float: right;
+}
+
+.form__title {
+    @extend .standard-title;
+    padding-bottom: 15px;
+    border-bottom: 1px solid rgb(209, 209, 209);
+}
+
+.form__sub-title {
+    @include box-sizing;
+    margin: 0;
+    font-size: 1.1em;
+    font-family: $titleFont;
+    color: #000;
+}
+
+.form__explanation-text {
+    margin: 0 0 2em 0;
+}
+
+.form-section {
+    @extend .clearfix;
+    width: 100%;
+    padding-top: 4em;
+    padding-bottom: 4em;
+    border-bottom: 1px solid $neutral;
+}
+
+.form-section--email-password {
+    @extend .form-section;
+    padding: 0 0 2em 0;
+}
+
+.password-strength-text {
+    display: block;
+    line-height: 1em;
+    padding: .25em 0;
+}
+
+.password-strength-hint {
+    font-size: .9em;
+}
+
+.password-strength-not-acceptable {
+    color: #ff0000;
+    font-weight: 700;
+}
+
+.password-strength-average {
+    color: #dc8100;
+    font-weight: 700;
+}
+
+.password-strength-strong {
+    color: #81dc00;
+    font-weight: 700;
+}
+
+.password-strength-excellent {
+    color: #00dc0a;
+    font-weight: 700;
+}
+
+.form-row {
+    @extend .clearfix;
+    @include box-sizing;
+    width: 100%;
+
+    @media #{$mq-medium} {
+        margin: 0 0 1em 0;
+    }
+}
+
+.form-row--less-padding {
+    @extend .form-row;
+
+    @media #{$mq-medium} {
+        margin: 0 0 .5em 0;
+    }
+}
+
+.form-row--border-separated {
+    @extend .form-row;
+    clear: both;
+    padding: 2em 0;
+    border: solid $neutral;
+    border-width: 1px 0;
+}
+
+.form-row--border-top {
+    @extend .form-row;
+    clear: both;
+    padding: 2em 0 0 0;
+    border: solid $neutral;
+    border-width: 1px 0 0 0;
+}
+
+.form-row--last {
+    @extend .form-row;
+    margin: 0;
+}
+
+.form-input {
+    @include box-sizing;
+    @extend .clearfix;
+    padding: 0;
+
+    & input[type="radio"] {
+        width: 1em;
+        height: 1em;
+    }
+
+    & .radio-list-vertical {
+        margin: .5em 0;
+
+        & label {
+            margin: .25em 0 .25em .5em;
+            line-height: 1.5em;
+        }
+    }
+}
+
+
+.form-control {
+    border: 1px solid #999;
+}
+
+input.form-input {
+    @include box-sizing;
+    padding: 5px;
+    margin: 3px 0 0 0;
+    width: 100%;
+    //test fix for border issue
+    border: 1px solid #999;
+}
+
+textarea.form-input {
+    padding: 10px;
+    line-height: 1.25em;
+    width: 99%;
+    height: 250px;
+    //test fix for border issue
+    border: 1px solid #999;
+}
+
+select.form-input {
+    @include box-sizing;
+    margin: 0;
+    padding: 5px;
+    width: 100%;
+    //test fix for border issue
+    border: 1px solid #999;
+}
+
+.form-input--account, input.form-input--account {
+    @extend .form-input;
+    width: auto;
+    display: block;
+    //test fix for border issue
+    border: 1px solid #999;
+}
+
+.form-field {
+    vertical-align: top;
+    margin: 5px 0;
+    line-height: 1em;
+}
+
+.form-field__half-width {
+    @extend .form-field;
+    width: 100%;
+    padding: 0;
+
+    @media #{$mq-medium} {
+        display: inline-block;
+        width: 48%;
+        margin: 0 2% 0 0;
+
+        &:nth-of-type(2) {
+            margin: 0 0 0 2%;
+            float: right;
+        }
+    }
+}
+
+.form-field__half-width--single-right {
+    @extend .form-field__half-width;
+
+    @media #{$mq-medium} {
+        display: inline-block;
+        width: 48%;
+        margin: 0 0 0 2%;
+        float: right;
+    }
+}
+
+
+.form-field__one-third-width {
+    @extend .form-field;
+    width: 100%;
+    padding: 0;
+
+    @media #{$mq-medium} {
+        display: inline-block;
+        width: 31.33%;
+        margin: 0;
+
+        &:nth-of-type(2) {
+            margin: 0 2.33%;
+        }
+    }
+}
+
+.form-field__17-percent-width {
+    @extend .form-field;
+    width: 100%;
+    padding: 0;
+
+    @media #{$mq-medium} {
+        display: inline-block;
+        width: 14%;
+        margin: 0;
+
+        &:nth-of-type(2) {
+            margin: 0 2%;
+        }
+    }
+}
+
+
+.form-field__full-width {
+    @extend .form-field;
+    width: 100%;
+    padding: 0;
+}
+
+.form-error-message, .form-control-error, .EditingFormErrorLabel {
+    color: $accent;
+    padding: 1px 0 0 0;
+    margin: 4px 0 0 0;
+    line-height: 1.25em;
+    font-size: 15px;
+    position: relative;
+    display: inline-block;
+    text-transform: capitalize;
+}
+
+.form-error-message--callout {
+    @extend .form-error-message;
+    font-size: 1.25em;
+    display: block;
+    padding: 0 0 1em 0;
+}
+
+.ErrorLabel {
+    display: block;
+    width: 100%;
+    max-width: $max-width;
+    margin: 1em auto 0 auto;
+    padding: 0;
+    color: $accent;
+    font-size: 1.25em;
+    position: relative;
+    clear: both;
+    line-height: 1.25em;
+}
+
+.form-success-message--callout {
+    @extend .form-error-message;
+    color: darken(#00dc0a,10);
+    font-size: 1.25em;
+    display: block;
+    padding: 0 0 1em 0;
+}
+
+
+
+.form-submit-button {
+    @extend .button;
+    background-color: #fff;
+    margin-top: 0;
+}
+
+.form-group-submit {
+    padding: 0 0 4em 0;
+}
+
+//Button Alignment
+.submit-button-wrapper {
+    .EditingFormTable {
+        width: 100%;
+        margin: 40px auto 65px auto;
+
+        @media #{$mq-medium} {
+            margin: 48px auto 80px auto;
+        }
+
+        @media #{$mq-large} {
+            width: 960px;
+        }
+    }
+
+    .EditingFormValueCell {
+        width: 169px;
+        float: left;
+
+        @media #{$mq-large} {
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+}
+
+.submit-button-wrapper--padded-left {
+    .EditingFormTable {
+        width: 100%;
+        margin: 40px auto 65px auto;
+
+        @media #{$mq-medium} {
+            margin: 48px auto 80px auto;
+        }
+
+        @media #{$mq-large} {
+            width: 960px;
+        }
+    }
+
+    .EditingFormValueCell {
+        width: 169px;
+        float: left;
+
+        @media #{$mq-large} {
+            width: 70%;
+            padding-left: 30%;
+        }
+    }
+}
+
+.account-info {
+    width: 90%;
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 0 2em 0;
+    border: solid $neutral;
+    border-width: 0 0 1px 0;
+}
+
+.account-info__title, .account-info__email {
+    display: block;
+    float: left;
+    padding: 0 1em 0 0;
+}
+
+.acount-info__label {
+    font-weight: 700;
+}
+
+.account-info__update {
+    @include transition(opacity 300ms);
+    color: $link;
+    text-decoration: none;
+
+    &:after {
+        margin: 0 0 0 .5em;
+        padding: 0;
+        content: url(../img/svg/arrow_view_blue.svg);
+        height: .4em;
+        width: .4em;
+        display: inline-block;
+    }
+
+    &:hover {
+        @include transition(opacity 300ms);
+        opacity: .75;
+    }
+}

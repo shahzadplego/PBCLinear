@@ -1,0 +1,85 @@
+﻿.hidden-link {
+    display: none;
+}
+
+.overlay-parent {
+    &:hover {
+        cursor: pointer;
+
+        & .overlay {
+            &:after {
+                background-color: rgba(0,0,0,.15);
+            }
+        }
+    }
+}
+
+.centered-background-image {
+    height: 8.5em;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-position: 50% 50%;
+
+    & h2, h3 {
+        @include vertical-align();
+        @include letter-spacing(250);
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        z-index: 50;
+        font-family: $serifFont;
+        width: 90%;
+
+        & .border {
+            padding: .5em;
+            border: solid 1px #fff;
+            display: inline-block;
+        }
+    }
+}
+
+
+
+.overlay {
+    object-fit: contain;
+
+    &:after {
+        @include transition(background-color 300ms);
+        background-color: rgba(0,0,0,.25);
+        width: 100%;
+        height: 100%;
+        display: block;
+        content: " ";
+        top: 0;
+        position: absolute;
+    }
+
+    & h2, h3 {
+        font-size: .7em;
+    }
+
+    @media #{$mq-940} {
+
+        & h2, h3 {
+            font-size: .9em;
+        }
+    }
+}
+
+.overlay-content {
+    margin: 0 auto 2em auto;
+
+    & p {
+        margin: 1em auto;
+    }
+}
+
+.overlay-link {
+    & a {
+        color: $link;
+    }
+}

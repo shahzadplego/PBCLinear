@@ -1,0 +1,42 @@
+﻿.extra-margin--bottom{
+    margin-bottom:3.75rem;
+    @media #{$mq-medium}
+    {
+        margin-bottom:5rem;
+    }
+}
+
+.no-margin-top--mobile{
+    margin-top:0;
+}
+
+.center {
+    text-align: center;
+}
+
+.center--desktop {
+    @media #{$mq-medium} {
+        text-align: center;
+    }
+}
+
+.center--mobile {
+    text-align: center;
+
+    @media #{$mq-medium} {
+        text-align: left;
+    }
+}
+
+
+.bold {
+    font-weight: 700;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.float-right{
+    float:right;
+}

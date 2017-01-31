@@ -1,0 +1,162 @@
+﻿
+.contact-us, .form-content {
+    @extend .content-width;
+    margin: 0 auto 2.5em auto;
+
+    & p {
+        margin: .5em 0;
+    }
+
+    & a {
+        transition: opacity 300ms;
+        color: $link;
+        text-decoration: none;
+        font-weight: 700;
+    }
+
+    & h1{
+        text-align: center;
+    }
+
+    .form-input {
+        padding: 0;
+
+        & input, select {
+            @include transition(border-color 300ms, background-color 300ms, color 300ms);
+            @include box-sizing;
+            padding: 5px;
+            margin: 2px 0 0 0;
+            width: 100%;
+            line-height: 1.25em;
+            height: 2.5em;
+            border: solid 1px $neutral;
+            background-color: lighten($bodyColor, 60);
+            color: lighten($bodyColor, 20);
+
+            &:focus {
+                border-color: $primaryDark;
+                color: $bodyColor;
+                background-color: #fff;
+            }
+        }
+
+        & textarea {
+            @include transition(border-color 300ms, background-color 300ms, color 300ms);
+            @include box-sizing;
+            padding: 10px;
+            line-height: 1.25em;
+            width: 99%;
+            height: 8em;
+            border: solid 1px $neutral;
+            background-color: lighten($bodyColor, 60);
+            color: lighten($bodyColor, 20);
+
+            &:focus {
+                outline: none;
+                border-color: $primaryDark;
+                color: $bodyColor;
+                background-color: #fff;
+            }
+        }
+    }
+
+    & input[type=submit] {
+        @extend .button;
+        margin: 0 auto;
+        width: 80%;
+        clear: both;
+
+        @media #{$mq-small} {
+            width: auto;
+            margin: 0;
+            float: right;
+        }
+    }
+
+    @media #{$mq-medium} {
+        margin: 0 auto 5em auto;
+
+        & h1{
+            text-align: left;
+        }
+    }
+}
+
+.form-name {
+    margin: 1em 0;
+
+    & h2 {
+        font-size: 1.25em;
+        margin: 0;
+        padding: 0;
+        text-transform:uppercase;
+    }
+
+    & p {
+        margin: 0;
+        padding: 0;
+    }
+
+    @media #{$mq-small} {
+        width: 30%;
+        float: left;
+        margin: 0;
+    }
+}
+
+.form-elements {
+    @media #{$mq-small} {
+        width: 66%;
+        float: right;
+    }
+}
+
+.contact-us__page-title {
+    @extend .page-title;
+    width: 100%;
+}
+
+.contact-us__sub-title {
+    font-family: "Montserrat",sans-serif;
+    color: #231f20;
+    margin: 0;
+    padding: 0;
+    font-weight: normal;
+}
+
+.contact-us__intro {
+    width: 100%;
+    margin-bottom: 40px;
+}
+
+.contact-us__intro-copy-column {
+    width: 100%;
+    vertical-align: top;
+    padding: 0;
+
+    @media #{$mq-medium} {
+        display: inline-block;
+        width: 250px;
+        margin: 0 5% 0 0;
+    }
+}
+
+.contact-us__required-field {
+    margin: 0 0 1.25em 0 !important;
+}
+
+.contact-us__form-wrapper {
+    margin: 0;
+
+    & .submit-button-wrapper {
+        margin-top: 20px;
+
+        input {
+            @extend .form-submit-button;
+        }
+    }
+
+    @media #{$mq-medium} {
+        margin: 2em 0 0 0;
+    }
+}

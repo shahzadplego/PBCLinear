@@ -1,0 +1,124 @@
+﻿
+.hero-background-image {
+    height: 16em;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat:no-repeat;
+    max-width:2000px;
+
+    @media #{$mq-medium}
+    {
+        height: 20em;
+    }
+    @media #{$mq-large}
+    {
+        height: 340px;
+    }
+
+    & h1, h2, h3 {
+        @include vertical-align();
+        @include letter-spacing(50);
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        z-index: 10;
+        font-family: $serifFont;
+        width: 90%;
+        max-width:960px;
+    }
+
+    & h1{
+        @include text-shadow();
+    }
+}
+
+
+
+.hero-background-image--510 {
+    height: 280px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat:no-repeat;
+    max-width:2000px;
+
+    @media #{$mq-medium}
+    {
+        height: 440px;
+    }
+    @media #{$mq-large}
+    {
+        height: 510px;
+    }
+
+    & h1, h2, h3 {
+        @include vertical-align();
+        @include letter-spacing(50);
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        z-index: 10;
+        font-family: $serifFont;
+        width: 90%;
+        max-width:840px;
+    }
+
+    & h2{
+        @include text-shadow();
+    }
+}
+
+
+
+
+.hero-background-image--280 {
+    height: 220px;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    background-position: 50% 50%;
+    background-size: cover;
+    background-repeat:no-repeat;
+    max-width:2000px;
+
+    @media #{$mq-medium}
+    {
+        height: 240px;
+    }
+    @media #{$mq-large}
+    {
+        height: 280px;
+    }
+
+    & h1, h2, h3 {
+        @include vertical-align();
+        @include letter-spacing(50);
+        color: #fff;
+        text-transform: uppercase;
+        padding: 0;
+        margin: 0 auto;
+        display: block;
+        text-align: center;
+        z-index: 10;
+        font-family: $serifFont;
+        width: 90%;
+        max-width:840px;
+    }
+
+    & h2{
+        @include text-shadow();
+
+    }
+}
+

@@ -1,0 +1,162 @@
+﻿.footer-cta {
+    @include box-sizing();
+    width: 100%;
+    background-color: $footerBannerBG;
+    padding: 2em;
+    margin: 0;
+
+    & .button--white {
+        margin: 0 auto;
+        max-width: 95%;
+    }
+
+    @media #{$mq-640} {
+        padding: 1.5em 0;
+
+        & .button--white {
+            display: inline-block;
+            margin: 0 2em;
+        }
+    }
+}
+
+.footer-cta__title {
+    color: #fff;
+    text-transform: uppercase;
+    margin: 0 0 1em 0;
+    padding: 0;
+    line-height: 1em;
+
+    @media #{$mq-640} {
+        margin: 0;
+        display: inline-block;
+    }
+}
+
+footer {
+    background-color: $footerBG;
+    padding: 2em 0 1em 0;
+    margin: 0;
+
+    @media #{$mq-640} {
+        padding: 2em 0 3em 0;
+    }
+}
+
+.footer-flex {
+    width: $max-percent;
+    max-width: $max-width;
+    margin: 0 auto;
+    color: #fff;
+    font-size: .9em;
+
+    & h3 {
+        color: #fff;
+        margin: 1em 0 0 0;
+        padding: 0 0 .25em 0;
+        line-height: 1em;
+        border-bottom: solid 1px $footerBorder;
+        font-weight: 500;
+        color: #fff;
+
+        & a {
+            text-decoration: none;
+            color: #fff;
+
+            &:after {
+                margin: 0 0 0 .5em;
+                padding: 0;
+                content: url(../img/svg/arrow_contact_footer.svg);
+                height: .5em;
+                width: .5em;
+                display: inline-block;
+            }
+
+            &:hover {
+                color: #fff;
+                @include transition(opacity 300ms);
+                opacity: .6;
+            }
+        }
+    }
+
+    & ul {
+        margin: 0;
+        padding: .5em 0 0 0;
+    }
+
+    & li {
+        list-style-position: inside;
+        margin: 0;
+        padding: 0;
+    }
+
+    & p {
+        margin: 0;
+        padding: .375em 0;
+        line-height: 1.125em;
+    }
+
+    & a {
+        @include transition(color 300ms);
+        text-decoration: none;
+        color: #fff;
+
+        &:hover {
+            color: darken(#fff, 40);
+        }
+    }
+
+    .tel-link {
+        text-decoration: none;
+        color: #fff;
+        @include no-select();
+
+        &:hover {
+            color: #fff;
+        }
+    }
+
+    @media #{$mq-640} {
+        display: flex;
+        justify-content: center;
+        flex-basis: 30%;
+
+
+        & h3 {
+            color: #fff;
+            margin: 0;
+        }
+    }
+}
+
+.footer-flex__item {
+    margin: 0 auto;
+    text-align: center;
+
+    @media #{$mq-640} {
+        width: 30%;
+        text-align: left;
+    }
+}
+
+.footer-copyright {
+    color: $footerDarkContent;
+
+    & p{
+        margin:-.25em 0 0 0;
+        padding:0;
+    }
+
+    & a {
+        opacity: .5;
+        color: $footerDarkContent;
+        line-height: 1.75em;
+        text-decoration: underline;
+
+        &:hover {
+            color: #fff;
+            opacity: 1;
+        }
+    }
+}

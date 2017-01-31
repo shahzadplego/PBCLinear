@@ -1,0 +1,6 @@
+User-agent: *
+Disallow: /admin/
+Disallow: /login.aspx?returnurl
+Disallow: /CMSModules/
+
+Sitemap: http://www.pbclinear.com/sitemap.xml

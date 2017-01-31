@@ -1,0 +1,60 @@
+/*Breakpoints*/
+$mq-xsmall: "only screen and (min-width:400px)";
+$mq-xsmall-width: 400px;
+$mq-small: "only screen and (min-width:480px)";
+$mq-small-width: 480px;
+$mq-580: "only screen and (min-width:580px)";
+$mq-580-width: 580px;
+$mq-640: "only screen and (min-width:640px)";
+$mq-640-width: 640px;
+$mq-medium: "only screen and (min-width:768px)";
+$mq-medium-width: 768px;
+$mq-860: "only screen and (min-width:860px)";
+$mq-860-width: 860px;
+$mq-940: "only screen and (min-width:940px)";
+$mq-940-width: 940px;
+$mq-large: "only screen and (min-width:1025px)";
+$mq-large-width: 1025px;
+$mq-xlarge: "only screen and (min-width:1170px)";
+$mq-xlarge-width: 1170px;
+
+
+/*Content Widths*/
+$max-percent:90%;
+$max-width:960px;
+$forty-five-percent:384px;
+$sixty-five-percent:630px;
+$seventy-two-percent:690px;
+$seventy-five-percent:730px;
+$seventy-seven-percent:77.5%;
+$seventy-percent:670px;
+$eight-five-percent:840px;
+
+/*Fonts*/
+$titleFont: 'Montserrat', sans-serif;
+$bodyFont: 'Roboto', sans-serif;
+$buttonFont: 'Roboto', sans-serif;
+$serifFont: 'Roboto Slab', serif;
+
+
+/*Colors*/
+$link:#D82831;
+$accent:#2b4251;
+$bodyColor:#666666;
+$titleColor:#000000;
+$subTitleColor:#3F3F3F;
+
+$primary:#5B7D87;
+$primaryDark:#2b4251;
+
+$screenWidthGrey:#f4f4f4;
+$screenWidthDarkGrey:$bodyColor;
+$neutral:#cccccc;
+$cardBG:#F9F9F9;
+$footerBG:#2e323c;
+$footerBannerBG:#2b4251;
+$footerBorder:#3C3B3C;
+$footerBannerText:#C1C1C1;
+$footerButtonBG:#5b7d87;
+$footerButtonBorder:#91b3bc;
+$footerDarkContent:#00a1e0;

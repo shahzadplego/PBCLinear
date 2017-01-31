@@ -1,0 +1,50 @@
+// Hide visually and from screenreaders, but maintain layout
+.invisible {
+    visibility: hidden;
+}
+
+.clearfix:before,
+.clearfix:after {
+    content: " "; /* 1 */
+    display: table; /* 2 */
+}
+
+.clearfix:after {
+    clear: both;
+}
+
+// For IE 6/7 only
+
+.clearfix {
+    *zoom: 1;
+}
+
+// Hide only visually, but have it available for screenreaders: h5bp.com/v
+
+@mixin visually-hidden {
+  position: absolute;
+  height: 1px;
+  width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+}
+// Turns off the visually-hidden effect.
+@mixin visually-hidden-off {
+  position: static;
+  clip: auto;
+  height: auto;
+  width: auto;
+  overflow: visible;
+}
+
+.visually-hidden {
+	@include visually-hidden;
+}
+
+.visually-hidden-off {
+	@include visually-hidden-off;
+}
+
+.hidden {
+	@include visually-hidden;
+}
